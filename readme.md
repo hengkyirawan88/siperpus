@@ -32,10 +32,10 @@ composer install
 rename file ".env.example" menjadi ".env"
 ```
 
-## Buka Web Server
+## Buka Web Browser, bula localhost/phpmyadmin
 
 
-## Buat database di localhost 
+## Buat database di phpmyadmin
 
 ```bash
 nama database : siperpus
@@ -56,7 +56,7 @@ DB_PASSWORD=
 php artisan key:generate
 ```
 
-## Buat database dengan nama siperpus via phpmyadmin lalu import database dari file database yang ada di project
+## Import database dari file database yang ada di project
 ```bash
 siperpus.sql
 ```
