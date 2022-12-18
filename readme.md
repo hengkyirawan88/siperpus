@@ -1,6 +1,6 @@
 <h1 align="center">Laravel 5.8 Perpustakaan</h1>
 
-## Author
+## Tata cara instalasi aplikasi
 
 Install xampp
 Masuk terminal / gitbase / cmd
@@ -17,7 +17,7 @@ atau
 extract file zip
 ```
 
-## Buka terminal
+## Tetap buka terminal
 
 
 ## Install composer
