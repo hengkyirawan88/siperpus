@@ -56,7 +56,7 @@ DB_PASSWORD=
 php artisan key:generate
 ```
 
-## Import database via phpmyadmin
+## Buat database dengan nama siperpus via phpmyadmin lalu import database dari file database yang ada di project
 ```bash
 siperpus.sql
 ```
@@ -75,4 +75,4 @@ php artisan storage:link
 php artisan serve
 ```
 
-Buka aplikasi danjalankan aplikasi xampp, lalu ketikkan localhost:8000 di browser untuk membuka aplikasi.
+Buka dan jalankan aplikasi xampp, lalu ketikkan localhost:8000 di browser untuk membuka aplikasi.
