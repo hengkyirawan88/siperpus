@@ -26,10 +26,10 @@ extract file zip
 composer install
 ```
 
-## Copy .Env
+## Rename.Env
 
 ```bash
-copy .env.example menjadi .env
+rename file ".env.example" menjadi ".env"
 ```
 
 ## Buka Web Server
@@ -57,7 +57,9 @@ php artisan key:generate
 ```
 
 ## Import database via phpmyadmin
-
+```bash
+siperpus.sql
+```
  
 
 ## Buat Storage Link
