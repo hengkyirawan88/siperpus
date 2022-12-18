@@ -41,6 +41,11 @@ rename file ".env.example" menjadi ".env"
 nama database : siperpus
 ```
 
+## Import database dari file database yang ada di project
+```bash
+siperpus.sql
+```
+ 
 ## Setting database di .env
 
 ```bash
@@ -56,11 +61,7 @@ DB_PASSWORD=
 php artisan key:generate
 ```
 
-## Import database dari file database yang ada di project
-```bash
-siperpus.sql
-```
- 
+
 
 ## Buat Storage Link
 
