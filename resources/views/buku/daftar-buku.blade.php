@@ -36,7 +36,10 @@ Daftar Buku | SIPERPUS
                                 <tr>
                                     <th>No</th>
                                     <th>Nama Buku</th>
+                                    <th>Nomor Buku</th>
+                                    <th>Penulis</th>
                                     <th>Gambar</th>
+                                    <th>Status</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
@@ -44,10 +47,13 @@ Daftar Buku | SIPERPUS
                                 <?php $no = 1; ?>
                                 @foreach($buku as $buku)
                                 <tr>
-                                    <td>{{ $no }}</td>
+                                    <td>{{ $no }}.</td>
                                     <td>{{ $buku['nama'] }}</td>
+                                    <td>{{ $buku['nobuku'] }}</td>
+                                    <td>{{ $buku['pengarang'] }}</td>
                                     <td><img src="{{ asset('img/buku/' . $buku['gambar']) }}"
-                                            style="width:100%;max-width:150px"></td>
+                                            style="width:95%;max-width:75px"></td>
+                                              <td>{{ $buku['status'] }}</td>
                                     <td>
                                         <button class="badge badge-info btn-sm m-1" data-toggle="modal"
                                             data-target="#detailModal" onclick="detailBuku('{{ $buku['slug'] }}')"><i
@@ -60,6 +66,7 @@ Daftar Buku | SIPERPUS
                                             href="/kelola/buku/delete/{{ $buku['slug'] }}"
                                             class="badge badge-danger btn-sm m-1"><i class="fa fa-trash"></i> Hapus</a>
                                     </td>
+
                                 </tr>
                                 <?php $no++  ?>
                                 @endforeach
@@ -89,6 +96,10 @@ Daftar Buku | SIPERPUS
                     <div class="form-group">
                         <label>Nama Buku</label>
                         <input type="text" name="nama" class="form-control" required>
+                    </div>
+                     <div class="form-group">
+                        <label>Nomor Buku</label>
+                        <input type="text" name="nobuku" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label>Pengarang</label>
@@ -131,6 +142,9 @@ Daftar Buku | SIPERPUS
                 <center class="mb-4">
                     <h6 id="judul_buku_detail"></h6>
                 </center>
+                  <center class="mb-4">
+                    <h6 id="nobuku_buku_detail"></h6>
+                </center>
                 <center>
                     <div id="gambar_detail" class="mb-2"></div>
                     <span id="pengarang_detail" class="mb-5" style="font-weight: bold"></span><br>
@@ -166,6 +180,10 @@ Daftar Buku | SIPERPUS
                         <label>Nama Buku</label>
                         <input type="text" name="nama" id="edit_nama" class="form-control" required>
                     </div>
+                     <div class="form-group">
+                        <label>Nomor Buku</label>
+                        <input type="text" name="nobuku" id="edit_nobuku" class="form-control" required>
+                    </div>
                     <div class="form-group">
                         <label>Pengarang</label>
                         <input type="text" name="pengarang" id="edit_pengarang" class="form-control" required>
@@ -196,6 +214,7 @@ Daftar Buku | SIPERPUS
 <script>
     function detailBuku(slug) {
             let judul_buku = document.getElementById(`judul_buku_detail`);
+            let nobuku_buku = document.getElementById(`nobuku_buku_detail`);
             let pengarang_buku = document.getElementById(`pengarang_detail`);
             let deskripsi_buku = document.getElementById(`deskripsi_detail`);
             $.ajax({
@@ -223,6 +242,7 @@ Daftar Buku | SIPERPUS
                         $("#current_gambar").html(`<img src="{{ asset('img/buku/${item.gambar}') }}" style="width:100%;max-width:150px">`)
                         document.getElementById(`edit_slug`).value = item.slug;
                         document.getElementById(`edit_nama`).value = item.nama;
+                        document.getElementById(`edit_nobuku`).value = item.nobuku;
                         document.getElementById(`edit_pengarang`).value = item.pengarang;
                         document.getElementById(`edit_deskripsi`).value = item.deskripsi;
                     });
@@ -233,9 +253,9 @@ Daftar Buku | SIPERPUS
 @endsection
 @section('footer')
 <!-- Start datatable js -->
-<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
-<script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
-<script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
-<script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js"></script>
+<script src="{{ asset('assets/js/jquery.dataTables.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('assets/js/dataTables.bootstrap4.min.js') }}"></script>
+<script src="{{ asset('assets/js/dataTables.responsive.min.js') }}"></script>
+<script src="{{ asset('assets/js/responsive.bootstrap.min.js') }}"></script>
 @endsection

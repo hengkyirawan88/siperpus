@@ -41,8 +41,8 @@ Daftar Peminjaman Buku | SIPERPUS
                                     <th>No</th>
                                     <th>Tanggal Pinjam</th>
                                     <th>Tanggal Maksimal Pengembalian</th>
-                                    <th>Nama Peminjam</th>
-                                    <th>Nama Buku</th>
+                                    <th>Nama Peminjam / NIM</th>
+                                    <th>Nama Buku / No Buku</th>
                                     <th>Status</th>
                                     <th>Aksi</th>
                                 </tr>
@@ -69,8 +69,8 @@ Daftar Peminjaman Buku | SIPERPUS
                                     <td>{{ $no }}</td>
                                     <td>{{ date("d-m-Y", strtotime($peminjaman->tanggal_pinjam))  }}</td>
                                     <td>{{ date("d-m-Y", strtotime($peminjaman->tanggal_maks_pengembalian))  }}</td>
-                                    <td>{{ $peminjaman->user->name }}</td>
-                                    <td>{{ $peminjaman->nama }}</td>
+                                    <td>{{ $peminjaman->user->name }} <bbr> {{ $peminjaman->user->nim }}</td>
+                                    <td>{{ $peminjaman->nama }} <br> {{ $peminjaman->nobuku }}</td>
                                     <td>{{ $peminjaman->status_peminjaman }}</td>
                                     <td>
                                         <button class="badge badge-info btn-sm m-1" data-toggle="modal"
@@ -313,9 +313,13 @@ Daftar Peminjaman Buku | SIPERPUS
 @section('footer')
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <!-- Start datatable js -->
-<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
-<script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+<script src="{{ asset('assets/js/jquery.dataTables.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('assets/js/dataTables.bootstrap4.min.js') }}"></script>
+<script src="{{ asset('assets/js/dataTables.responsive.min.js') }}"></script>
+<script src="{{ asset('assets/js/responsive.bootstrap.min.js') }}"></script>
+<!-- <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
-<script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js"></script> -->
 @endsection

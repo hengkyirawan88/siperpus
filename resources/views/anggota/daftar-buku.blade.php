@@ -36,6 +36,7 @@ Daftar Buku | SIPERPUS
                                 <tr>
                                     <th>No</th>
                                     <th>Nama Buku</th>
+                                    <th>Nomor Buku</th>
                                     <th>Gambar</th>
                                     <th>Detail</th>
                                     <th>Status Buku</th>
@@ -47,6 +48,7 @@ Daftar Buku | SIPERPUS
                                 <tr>
                                     <td>{{ $no }}</td>
                                     <td>{{ $buku['nama'] }}</td>
+                                    <td>{{ $buku['nobuku'] }}</td>
                                     <td><img src="{{ asset('img/buku/' . $buku['gambar']) }}"
                                             style="width:50%;max-width:75px"></td>
                                     <td>
@@ -235,9 +237,9 @@ Daftar Buku | SIPERPUS
 @endsection
 @section('footer')
 <!-- Start datatable js -->
-<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
-<script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
-<script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
-<script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js"></script>
+<script src="{{ asset('assets/js/jquery.dataTables.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('assets/js/dataTables.bootstrap4.min.js') }}"></script>
+<script src="{{ asset('assets/js/dataTables.responsive.min.js') }}"></script>
+<script src="{{ asset('assets/js/responsive.bootstrap.min.js') }}"></script>
 @endsection

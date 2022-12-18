@@ -10,7 +10,7 @@ class BukuController extends Controller
 {
     public function index()
     {
-        $buku = Buku::orderBy('nama')->get();
+        $buku = Buku::orderBy('created_at', 'DESC')->get();
         return view('buku.daftar-buku', compact('buku'));
     }
 
@@ -18,6 +18,7 @@ class BukuController extends Controller
     {
         $this->validate($request, [
             'nama' => 'required',
+            'nobuku' => 'required',
             'pengarang' => 'required',
             'deskripsi' => 'required',
             'gambar' => 'mimes:jpg,png,jpeg|max:3100'
@@ -25,10 +26,13 @@ class BukuController extends Controller
 
         $pathUpload = 'img/buku';
 
+        $ada = 'Ada';
         $buku = new Buku;
         $buku->nama = $request->nama;
+        $buku->nobuku = $request->nobuku;
         $buku->slug = Str::slug($request->nama) . '-' . date('ymdhis');
         $buku->pengarang = $request->pengarang;
+        $buku->status = $ada;
         $buku->deskripsi = $request->deskripsi;
 
         if ($request->hasFile('gambar')) {
@@ -58,6 +62,7 @@ class BukuController extends Controller
     {
         $this->validate($request, [
             'nama' => 'required',
+            'nobuku' => 'required',
             'pengarang' => 'required',
             'deskripsi' => 'required',
             'gambar' => 'mimes:jpg,png,jpeg|max:3100'
@@ -67,6 +72,7 @@ class BukuController extends Controller
 
         $buku = Buku::where('slug', $request->slug)->first();
         $buku->nama = $request->nama;
+        $buku->nobuku = $request->nobuku;
         $buku->slug = Str::slug($request->nama) . '-' . date('ymdhis');
         $buku->pengarang = $request->pengarang;
         $buku->deskripsi = $request->deskripsi;

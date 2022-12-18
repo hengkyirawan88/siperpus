@@ -22,6 +22,14 @@ Register Anggota | SIPERPUS
                         <div class="text-danger">{{ $errors->first('name') }}</div>
                         @endif
                     </div>
+                     <div class="form-gp">
+                        <label for="exampleInputName1">NIM</label>
+                        <input type="text" id="exampleInputName1" value="{{ old('nim') }}" name="nim" required>
+                        <i class="ti-user"></i>
+                        @if($errors->has('nim'))
+                        <div class="text-danger">{{ $errors->first('nim') }}</div>
+                        @endif
+                    </div>
                     <div class="form-gp">
                         <label for="exampleInputName1">Alamat Lengkap</label>
                         <input type="text" id="exampleInputName1" value="{{ old('alamat') }}" name="alamat" required>

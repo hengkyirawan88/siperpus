@@ -39,6 +39,7 @@ class AuthController extends Controller
     {
         $this->validate($request, [
             'name' => 'required|min:2|max:50',
+            'nim' => 'required|min:2|max:50',
             'alamat' => 'required|min:5|max:100',
             'email' => 'required|email|unique:users,email',
             'no_hp' => 'required|numeric',
@@ -48,6 +49,7 @@ class AuthController extends Controller
         $user = new User;
         $user->name = trim($request->name);
         $user->email = $request->email;
+        $user->nim = $request->nim;
         $user->alamat = $request->alamat;
         $user->no_hp = $request->no_hp;
         $user->password = bcrypt($request->password);

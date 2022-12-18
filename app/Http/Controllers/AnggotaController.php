@@ -26,9 +26,11 @@ class AnggotaController extends Controller
         return view('anggota.daftar-peminjaman', compact('peminjaman', 'buku', 'user'));
     }
 
+
+
        public function buku()
     {
-        $buku = Buku::orderBy('nama')->get();
+        $buku = Buku::orderBy('created_at', 'DESC')->get();
         return view('anggota.daftar-buku', compact('buku'));
     }
 
@@ -68,8 +70,22 @@ class AnggotaController extends Controller
         return redirect('/anggota/peminjaman/daftar')->with('status', 'Sukses Menambah Data Peminjaman');
     }
     public function riwayatPinjam()
-    {
-        $peminjaman = Peminjaman::orderBy('id', 'DESC')->where('id_user', auth()->user()->id)->get();
+    // {
+    //     $peminjaman = Peminjaman::orderBy('id', 'DESC')->where('id_user', auth()->user()->id)->get();
+
+    //     return view('anggota.riwayat-pinjam', compact('peminjaman'));
+    // }
+
+       {
+        $peminjaman = Peminjaman::leftJoin('Buku', 'peminjaman.nama_buku', '=', 'buku.id')
+
+            ->select('peminjaman.*', 'buku.nama AS nama', 'buku.id AS idbuku','buku.nobuku AS nobuku')
+            ->orderBy('peminjaman.tanggal_pinjam', 'DESC')
+            ->where('peminjaman.id_user', auth()->user()->id)
+            ->get();
+        // $buku = Buku::orderBy('nama')->get();
+        // $user = User::role('anggota')->where('status_user', 'Aktif')->orderBy('name')->get();
+
         return view('anggota.riwayat-pinjam', compact('peminjaman'));
     }
 

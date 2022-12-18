@@ -21,7 +21,7 @@ class PeminjamanController extends Controller
         // flight::leftJoin("fuel_records AS fr", "fr.aircraftID" "flights.aircraftID")
         // $peminjaman = DB::table('Peminjaman')
             // ->join('Buku', 'peminjaman.nama_buku', '=', 'buku.id')
-            ->select('peminjaman.*', 'buku.nama', 'buku.id AS idbuku')
+            ->select('peminjaman.*', 'buku.nama', 'buku.id AS idbuku','buku.nobuku AS nobuku')
             ->orderBy('peminjaman.tanggal_pinjam', 'DESC')
             ->get();
         $buku = Buku::orderBy('nama')->get();

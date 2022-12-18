@@ -33,7 +33,7 @@
                         <div class="col-xl-3 col-lg-3 d-none d-lg-block">
                             <div class="Appointment">
                                 <div class="phone_num d-none d-xl-block">
-                                    <a href=""> <i class="fa fa-phone"></i> (0353) 88xxxx</a>
+                                    <a href=""> <i class="fa fa-phone"></i>(+62) 878-2697-8217</a>
                                 </div>
                             </div>
                         </div>

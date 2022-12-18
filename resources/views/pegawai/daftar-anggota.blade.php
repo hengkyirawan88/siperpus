@@ -15,7 +15,7 @@ Daftar Anggota | SIPERPUS
 @section('content')
 <div class="main-content-inner">
     <div class="row">
-        <div class="col-lg-12 mt-5">
+        <div class="col-lg-12">
             <div class="card">
                 <div class="card-body">
                     <h4 class="header-title">Daftar Anggota Perpustakaan</h4>
@@ -33,7 +33,7 @@ Daftar Anggota | SIPERPUS
                                 <tr>
                                     <th>No</th>
                                     <th>Nama</th>
-                                    <th>Email</th>
+                                    <th>Email / NIM</th>
                                     <th>Alamat</th>
                                     <th>No HP</th>
                                     <th>Status Anggota</th>
@@ -44,9 +44,9 @@ Daftar Anggota | SIPERPUS
                                 <?php $no = 1; ?>
                                 @foreach($anggota as $anggota)
                                 <tr>
-                                    <td>{{ $no }}</td>
+                                    <td>{{ $no }}.</td>
                                     <td>{{ $anggota->name }}</td>
-                                    <td>{{ $anggota->email }}</td>
+                                    <td>{{ $anggota->email }} <br> {{ $anggota->nim }}</td>
                                     <td>{{ $anggota->alamat }}</td>
                                     <td>{{ $anggota->no_hp }}</td>
                                     <td>{{ $anggota->status_user }}</td>
@@ -81,9 +81,9 @@ Daftar Anggota | SIPERPUS
 @endsection
 @section('footer')
 <!-- Start datatable js -->
-<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
-<script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
-<script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
-<script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js"></script>
+<script src="{{ asset('assets/js/jquery.dataTables.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('assets/js/dataTables.bootstrap4.min.js') }}"></script>
+<script src="{{ asset('assets/js/dataTables.responsive.min.js') }}"></script>
+<script src="{{ asset('assets/js/responsive.bootstrap.min.js') }}"></script>
 @endsection
