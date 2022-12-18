@@ -37,7 +37,7 @@ Katalog Buku | SIPERPUS
                     </a>
                     <div class="card-block mt-3">
                         <a href="/buku/detail/{{ $b->slug }}">
-                            <h4 class="card-title m-2">{{ $b->nama }}</h4>
+                            <h4 class="card-title m-2">{{ $b->nama }} ({{ $b->status }})</h4>
                         </a>
                         <p class="card-text m-2">{{ substr($b->deskripsi,0,130) }}... <a
                                 href="/buku/detail/{{ $b->slug }}">Read More</a></p>

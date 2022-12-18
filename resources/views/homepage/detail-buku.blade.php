@@ -25,7 +25,7 @@ Katalog Buku | SIPERPUS
                 <h2 class="mb-5">{{ $buku->nama }}</h2>
                 <img src="{{ asset('img/buku/' . $buku->gambar) }}" alt="{{ $buku->nama }}"
                     style="width: 100%;max-width: 350px">
-                <h5 class="m-3">Pengarang : {{ $buku->pengarang }}</h5>
+                <h5 class="m-3">Pengarang : {{ $buku->pengarang }}, No Buku : {{ $buku->nobuku }}, Status : {{ $buku->status }}</h5>
                 <p>{{ $buku->deskripsi }}</p>
             </div>
         </div>
