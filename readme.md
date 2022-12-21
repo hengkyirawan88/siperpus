@@ -2,7 +2,8 @@
 
 ## Tata cara instalasi aplikasi
 
-Install xampp
+Pastikan konek internet
+Download dan Install xampp, jalankan / start .
 Masuk terminal / gitbase / cmd
 Masuk ke folder htdocs
 
@@ -17,11 +18,11 @@ atau
 extract file zip
 ```
 
-Download composer di link : https://getcomposer.org/Composer-Setup.exe, lalu jalankan file exe nya. Klik next - next saja sampai finish.
+Jika belum ada composer di laptop / PC anda, silahkan download composer di link : https://getcomposer.org/Composer-Setup.exe, lalu jalankan file exe nya. Klik next - next saja sampai finish. Jika sudah pernah download composer, silahkan lewati step ini.
 
 ## Buka terminal lagi
 
-## Install composer
+## Install composer, dan tunggu sampai selesai
 
 ```bash
 composer install
