@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 21 Des 2022 pada 14.40
+-- Waktu pembuatan: 21 Des 2022 pada 14.56
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.29
 
@@ -118,7 +118,8 @@ INSERT INTO `model_has_roles` (`role_id`, `model_type`, `model_id`) VALUES
 (3, 'App\\User', 5),
 (3, 'App\\User', 10),
 (3, 'App\\User', 11),
-(3, 'App\\User', 12);
+(3, 'App\\User', 12),
+(3, 'App\\User', 13);
 
 -- --------------------------------------------------------
 
@@ -270,10 +271,11 @@ INSERT INTO `users` (`id`, `name`, `email`, `alamat`, `no_hp`, `password`, `stat
 (5, 'Gita Savitri Devi', 'gita@gmail.com', 'Jl. Sesame 12 Bojonegoro', '082341234821', '$2y$10$s7.L/GrMVb.uH/HqBYw/quXJ3kkVVBmGbyVfG0l0bVa3xXzhcG0ga', 'Aktif', 'ub8qax9pVuJoFmaccZJgQyuPZ4bor4t3zrc767xJQYuWt9dg3aWh3t2y27qA', '2021-01-24 20:43:00', '2021-01-29 19:05:17', '08.080.0920'),
 (6, 'Agung Adi', 'agung@gmail.com', 'Jl. Depan Stadion 15', '08951234231', '$2y$10$PEGA7NvFNvI6kCvdykpZLenmMqkztswrms1Q5NbMkWYQPxJXP51Y.', 'Aktif', '1bP8Mi8o8kemLjHzv3kBWx7jOdUte4N9CH5x58tQDgVCmqtPP31WwYEZ2lp5', '2021-01-29 20:08:50', '2021-01-29 20:08:50', '08.080.0920'),
 (8, 'Demo Pegawai', 'demo@gmail.com', 'Jl Demo Pegawai', '08123456732', '$2y$10$GzbRnUGXhoJxZX0ygfY3c.aLNDsnf0.V9ecsqIGkRr7be6Oru0tKK', 'Aktif', 'te08fttYdr1IBOIruAX9eYo69aZ2eomqf7UmguBdiPBhshiR7rEY4ObE9VB4', '2021-01-31 09:08:39', '2021-01-31 09:08:39', '08.080.0920'),
-(9, 'Another Admin', 'admin@gmail.com', 'Bojonegoro', '0859212323', '$2y$10$HW5RCgubBPlw.07.Y5eT7eerFVfCaMMCjnCYkryYqxDcUaUcr5xWe', 'Aktif', 'Lv4rNJOgc6jPXgwnc7i9fIHHupfEBPfBWbbTH2gxKHk6zvm6hYRXsB64bjhN', '2021-01-31 09:13:10', '2021-01-31 09:13:10', '08.080.0920'),
+(9, 'Administrator', 'admin@gmail.com', 'Bojonegoro', '0859212323', '$2y$10$Fp3.IsCaEZocOgp85Lam0eCCXV9sbFpLuN0g1sgHAsJfxbKDPUfjq', 'Aktif', 'Lv4rNJOgc6jPXgwnc7i9fIHHupfEBPfBWbbTH2gxKHk6zvm6hYRXsB64bjhN', '2021-01-31 09:13:10', '2021-01-31 09:13:10', '08.080.0920'),
 (10, 'Hengky Irawan', 'hengky.kominfo@gmail.com', 'Banjarnegara', '08', '$2y$10$/4vm2CBKka6X4Glmsxb3ReSTPwawqahW2nWSjJpIKvVE.miX4tyXO', 'Aktif', 'CbgbbnAHV3hTU0oJxbndUuFBcQxFnrfw41iKAgnnoF1kN5O05KCuwSrP87Cp', '2022-12-17 18:13:31', '2022-12-17 18:15:45', '08.080.0920'),
 (11, 'Rudy Hartono', 'hengky.ihya2@gmail.com', 'Jakarta', '08439483948', '$2y$10$HW5RCgubBPlw.07.Y5eT7eerFVfCaMMCjnCYkryYqxDcUaUcr5xWe', 'Tidak Aktif', '5gindmX809NV7NIyNx1XDhex7JreyMySY3diPV6tVOhA9eEEO5vAljx4yZHR', '2022-12-18 01:48:25', '2022-12-18 01:48:25', '08.080.0920'),
-(12, 'Fatimah', 'fatimah@gmail.com', 'Banjarnegara', '0090909098989', '$2y$10$Vt2LoFi9jdQWHlbHd1kY0uk9wxm.kozVbTEGe1OhgYTVdfFzOWHzy', 'Tidak Aktif', 'k0OAvc8bofBYa806bdTvaeWClDEas52bxmVXerOn4bI51uFsVb7cqoYpWbV4', '2022-12-18 05:59:36', '2022-12-18 05:59:36', '08.080.0920');
+(12, 'Fatimah', 'fatimah@gmail.com', 'Banjarnegara', '0090909098989', '$2y$10$Vt2LoFi9jdQWHlbHd1kY0uk9wxm.kozVbTEGe1OhgYTVdfFzOWHzy', 'Aktif', 'k0OAvc8bofBYa806bdTvaeWClDEas52bxmVXerOn4bI51uFsVb7cqoYpWbV4', '2022-12-18 05:59:36', '2022-12-18 05:59:36', '08.080.0920'),
+(13, 'Nanang s', 'nanang@gmail.com', 'Surabaya', '98594549859', '$2y$10$Fp3.IsCaEZocOgp85Lam0eCCXV9sbFpLuN0g1sgHAsJfxbKDPUfjq', 'Tidak Aktif', 'UbezkYHPkDZhVhzfeBaVlb7VS8G0bGIqY897dVKfmOViswfTWfSqg43naDB7', '2022-12-21 06:55:07', '2022-12-21 06:55:07', '343434');
 
 --
 -- Indexes for dumped tables
@@ -393,7 +395,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)

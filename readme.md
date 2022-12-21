@@ -85,7 +85,7 @@ php artisan serve
 
 ## Ketikkan localhost:8000 di browser untuk membuka aplikasi. 
 ```bash
-Akun admin perpustakaan(username : admin@gmail.com, password : perpustakaan2022)
+Akun admin perpustakaan(username : admin@gmail.com, password : perpustakaan2023)
 ```
 ```bash
 Salah satu akun anggota perpustakaan(username : hengky.kominfo@gmail.com, password : adwa2019)
