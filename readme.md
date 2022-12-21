@@ -20,7 +20,10 @@ extract file zip
 
 Jika belum ada composer di laptop / PC anda, silahkan download composer di link : https://getcomposer.org/Composer-Setup.exe, lalu jalankan file exe nya. Klik next - next saja sampai finish. Jika sudah pernah download composer, silahkan lewati step ini.
 
-## Buka terminal lagi
+## Buka terminal lagi, masuk ke folder project nya
+```bash
+cd siperpus
+```
 
 ## Install composer, dan tunggu sampai selesai
 
