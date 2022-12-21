@@ -1,6 +1,6 @@
-<h1 align="center">Laravel 5.8 Perpustakaan</h1>
+<h1 align="center">Tata cara instalasi aplikasi Laravel 5.8 Perpustakaan</h1>
 
-## Tata cara instalasi aplikasi
+## Cloning project
 
 Pastikan konek internet, lalu 
 Download dan Install xampp (kemudian jalankan xampp / start), 
@@ -12,7 +12,7 @@ git clone https://github.com/hengkyirawan88/siperpus.git
 ```
 atau 
 
-**Download zip**
+## **Download zip**
 
 ```bash
 extract file zip
