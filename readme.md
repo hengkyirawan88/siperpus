@@ -17,8 +17,7 @@ atau
 extract file zip
 ```
 
-Download composer di link : https://getcomposer.org/Composer-Setup.exe
-Install composer.
+Download composer di link : https://getcomposer.org/Composer-Setup.exe, lalu jalankan file exe nya. Klik next - next saja sampai finish.
 
 ## Buka terminal lagi
 
@@ -31,10 +30,10 @@ composer install
 ## Rename.Env
 
 ```bash
-rename file ".env.example" menjadi ".env"
+cp .env.example.env .env
 ```
 
-## Buka Web Browser, bula localhost/phpmyadmin
+## Buka Web Browser, buka localhost/phpmyadmin
 
 
 ## Buat database di phpmyadmin
@@ -48,9 +47,11 @@ nama database : siperpus
 siperpus.sql
 ```
  
-## Setting database di .env
+## Setting database di .env bagian di bawah ini :
 
 ```bash
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=siperpus
 DB_USERNAME=root
