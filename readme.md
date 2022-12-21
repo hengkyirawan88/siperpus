@@ -51,7 +51,7 @@ nama database : siperpus
 siperpus.sql
 ```
  
-## Setting database di .env bagian di bawah ini :
+## Pastikan settingan database di file .env sesuai dengan keterangan di bawah ini (sesuaikan jika ada perubahan nama database) :
 
 ```bash
 DB_CONNECTION=mysql
