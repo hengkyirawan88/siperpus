@@ -3,7 +3,7 @@
 ## Tata cara instalasi aplikasi
 
 Pastikan konek internet, lalu 
-Download dan Install xampp, 
+Download dan Install xampp (kemudian jalankan xampp / start), 
 Masuk terminal / gitbase / cmd, lalu
 Masuk ke folder htdocs
 
