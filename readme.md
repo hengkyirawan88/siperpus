@@ -2,9 +2,9 @@
 
 ## Tata cara instalasi aplikasi
 
-Pastikan konek internet
-Download dan Install xampp, jalankan / start .
-Masuk terminal / gitbase / cmd
+Pastikan konek internet, lalu 
+Download dan Install xampp, 
+Masuk terminal / gitbase / cmd, lalu
 Masuk ke folder htdocs
 
 ```bash
