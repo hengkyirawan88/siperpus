@@ -27,7 +27,7 @@ Download composer di link : https://getcomposer.org/Composer-Setup.exe, lalu jal
 composer install
 ```
 
-## Rename.Env
+## Ubah file .env.example menjadi .env
 
 ```bash
 cp .env.example.env .env
