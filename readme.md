@@ -88,5 +88,5 @@ php artisan serve
 Akun admin perpustakaan(username : admin@gmail.com, password : perpustakaan2023)
 ```
 ```bash
-Salah satu akun anggota perpustakaan(username : hengky.kominfo@gmail.com, password : adwa2019)
+Salah satu akun anggota perpustakaan(username : hengky.kominfo@gmail.com, password : perpustakaan2023)
 ```
