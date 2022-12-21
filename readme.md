@@ -62,7 +62,7 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-## Generate key
+## Ketik perintah di bawah ini untuk men-Generate key
 
 ```bash
 php artisan key:generate
@@ -83,7 +83,7 @@ php artisan storage:link
 php artisan serve
 ```
 
-Ketikkan localhost:8000 di browser untuk membuka aplikasi. 
+## Ketikkan localhost:8000 di browser untuk membuka aplikasi. 
 ```bash
 Akun admin perpustakaan(username : admin@gmail.com, password : perpustakaan2022)
 ```
