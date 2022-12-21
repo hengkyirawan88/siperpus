@@ -17,8 +17,10 @@ atau
 extract file zip
 ```
 
-## Tetap buka terminal
+Download composer di link : https://getcomposer.org/Composer-Setup.exe
+Install composer.
 
+## Buka terminal lagi
 
 ## Install composer
 
